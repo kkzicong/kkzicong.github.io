@@ -1455,6 +1455,12 @@
 
 		/* Basic */
 
+			body {
+				background-repeat: repeat, repeat;
+				background-size: auto, auto;
+			}
+
+
 			body, input, textarea, select {
 				font-size: 11pt;
 				line-height: 1.75em;
