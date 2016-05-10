@@ -27,6 +27,8 @@
 
 	var $window = $(window);
 
+	var amountScrolled = 300;
+
 	$window.on('load', function() {
 
 		skel
@@ -238,6 +240,23 @@
 
 			});
 
+	});
+
+	//back to top button fade-in and out
+	$(window).scroll(function() {
+		if ( $(window).scrollTop() > amountScrolled ) {
+			$('a.back-to-top').fadeIn('slow');
+		} else {
+			$('a.back-to-top').fadeOut('slow');
+		}
+	});
+
+	//flip to top animation
+	$('a.back-to-top').click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 700);
+		return false;
 	});
 
 })(jQuery);
